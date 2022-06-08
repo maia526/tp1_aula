@@ -1,11 +1,9 @@
 // Leia uma matriz 4x4 de números inteiros e imprima os
 // elementos da diagonal principal e da diagonal secundária.
-
-//essa versão permite seja possivel somar os elementos de uma linha de uma matriz com qualquer numero de linhas e colunas.
 #include <stdio.h>
 const int LINHAS = 4;
 const int COLUNAS = 4;
-
+//essa versão permite somar os elementos de uma linha de uma matriz com qualque numero de linhas e colunas.
 int main() {
     int m[LINHAS][COLUNAS];
     int soma[LINHAS];
@@ -31,7 +29,10 @@ int main() {
     }
     
     //imprimir
-    printf("\nSoma linha 1: %d", soma[0]);
-    printf("\nSoma linha 2: %d", soma[1]);
-    printf("\nSoma total: %d", soma[0] + soma[1]);
+    int total = 0;
+    for (int i = 0; i < LINHAS; i++) {
+        printf("\nSoma linha %d: %d", i+1, soma[i]);
+        total += soma[i];
+    }
+    printf("\nTotal: %d\n", total);
 }
