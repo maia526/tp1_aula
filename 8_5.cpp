@@ -13,7 +13,11 @@ void fatorial(int n){
 
 int main(){
     int n;
-    printf("Digite um numero: ");
-    scanf("%d", &n);
+    for (int j= 0; j < 1; ){
+        printf("Digite um numero: ");
+        scanf("%d", &n);
+        if (n >= 0)
+            j++;
+    }
     fatorial(n);
 }
