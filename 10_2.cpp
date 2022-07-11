@@ -39,5 +39,6 @@ int main()
         printf("'%s'", produto[i].descricao);
         printf("\nPreco: %.2f", produto[i].preco);
         printf("\n%d unidades vendidas.\n", produto[i].n);
+        printf("Total de vendas: %.2f\n", produto[i].n * produto[i].preco);
     }
 }
